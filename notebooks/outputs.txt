@@ -1,0 +1,11 @@
+=== TRYING TF-IDF VECTORIZATION ===
+
+Experimenting with TF-IDF vectorization...
+TF-IDF features: 10000 (reduced from 98532)
+Samples: 8462
+
+Training Logistic Regression with TF-IDF...
+TF-IDF Logistic Regression Accuracy: 0.4389 (43.9%)
+Improvement over Count Vectorizer: +8.2%
+
+
