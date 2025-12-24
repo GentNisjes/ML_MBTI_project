@@ -1,4 +1,5 @@
 checkout.ipynb
 .pkl
 .csv
-.txt
+.txt"data/processed/*.pkl" 
+"models/*.pkl" 
