@@ -1,11 +1,21 @@
-=== TRYING TF-IDF VECTORIZATION ===
+MODEL COMPARISON RESULTS
+======================================================================
 
-Experimenting with TF-IDF vectorization...
-TF-IDF features: 10000 (reduced from 98532)
-Samples: 8462
+                           I/E        N/S        T/F        J/P    Average
+Model                                                                     
+SVM                  76.904903  86.532782  76.373302  64.559953  76.092735
+SVM (Upsampled)      67.454223  76.904903  69.994093  56.822209  67.793857
+SVM (Class Weights)  66.391022  75.546367  69.875960  55.936208  66.937389
+SVM (Tuned)          77.200236  86.237448  76.373302  62.315416  75.531601
+LR                   77.200236  86.060248  75.014767  62.197283  75.118133
+LR (Upsampled)       73.419965  80.744241  75.664501  62.079149  72.976964
+NB (BOW)             71.580000  78.790000  77.880000  66.650000  73.725000
+NB (TF-IDF)          73.640000  78.890000  76.670000  67.190000  74.097500
 
-Training Logistic Regression with TF-IDF...
-TF-IDF Logistic Regression Accuracy: 0.4389 (43.9%)
-Improvement over Count Vectorizer: +8.2%
+======================================================================
 
-
+Best Model per Dimension:
+  I/E: SVM (Tuned) (77.20%)
+  N/S: SVM (86.53%)
+  T/F: NB (BOW) (77.88%)
+  J/P: NB (TF-IDF) (67.19%)

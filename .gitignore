@@ -1,4 +1,4 @@
 checkout.ipynb
-.pkl
-.csv
-.txt
+*.pkl
+*.csv
+*.txt
