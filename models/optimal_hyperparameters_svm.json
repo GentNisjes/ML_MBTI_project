@@ -1,0 +1,46 @@
+{
+  "I/E": {
+    "best_C": 0.5,
+    "kernel": "linear",
+    "gamma": null,
+    "degree": null,
+    "max_iter": 1000,
+    "random_state": 42,
+    "upsampling": true,
+    "expected_test_f1": 0.8547,
+    "expected_test_accuracy": 0.7507
+  },
+  "J/P": {
+    "best_C": 0.5,
+    "kernel": "linear",
+    "gamma": null,
+    "degree": null,
+    "max_iter": 1000,
+    "random_state": 42,
+    "upsampling": true,
+    "expected_test_f1": 0.5676,
+    "expected_test_accuracy": 0.4259
+  },
+  "N/S": {
+    "best_C": 0.5,
+    "kernel": "linear",
+    "gamma": null,
+    "degree": null,
+    "max_iter": 1000,
+    "random_state": 42,
+    "upsampling": true,
+    "expected_test_f1": 0.9106,
+    "expected_test_accuracy": 0.8376
+  },
+  "T/F": {
+    "best_C": 0.5,
+    "kernel": "linear",
+    "gamma": null,
+    "degree": null,
+    "max_iter": 1000,
+    "random_state": 42,
+    "upsampling": true,
+    "expected_test_f1": 0.629,
+    "expected_test_accuracy": 0.4808
+  }
+}
