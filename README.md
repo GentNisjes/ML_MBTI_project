@@ -20,27 +20,27 @@ The project uses the MBTI Myers-Briggs Personality Type Dataset from Kaggle, con
 
 ## Models Implemented
 
-### 1. Support Vector Machine (Linear SVC)
+### 1. [Support Vector Machine (Linear SVC)](notebooks/mbti_svm.ipynb)
 - Binary classification with optimal hyperparameters
 - Manual C parameter tuning to address overfitting
 - RandomOverSampler for class imbalance
 
-### 2. Logistic Regression
+### 2. [Logistic Regression](notebooks/mbti_logistic_regression.ipynb)
 - L1 (Lasso) and L2 (Ridge) regularization
 - Generalization-aware hyperparameter selection
-- GridSearchCV with 5-fold cross-validation
+- GridSearchCV with 5-fold cross-validation ([hyperparameter tuning notebook](notebooks/logistic_regression_hyperparameter_tuning.ipynb))
 
 ### 3. Naive Bayes
-- **Bag of Words (BoW)**: Simple word frequency features
-- **TF-IDF**: Weighted features emphasizing distinctive words
+- **[Bag of Words (BoW)](notebooks/naive_bayes_BOW.ipynb)**: Simple word frequency features
+- **[TF-IDF](notebooks/naive_bayes_TF-IDF.ipynb)**: Weighted features emphasizing distinctive words
 - Alpha smoothing for regularization
 
 ## Key Features
 
-- **Comprehensive Preprocessing**: Text cleaning, aggregation, and TF-IDF vectorization
+- **[Comprehensive Preprocessing](notebooks/mbti_preprocessing.ipynb)**: Text cleaning, aggregation, and TF-IDF vectorization
 - **Overfitting Analysis**: Train vs. test performance comparison using both accuracy and F1-score metrics
 - **Hyperparameter Tuning**: Systematic optimization with generalization considerations
-- **Model Comparison**: Detailed performance metrics across all models and dimensions
+- **[Model Comparison](notebooks/model_comparison_graphs.ipynb)**: Detailed performance metrics across all models and dimensions
 - **Visualization**: Heatmaps, confusion matrices, and overfitting gap analysis
 
 ## Project Structure
@@ -74,7 +74,7 @@ Performance varies across dimensions, with N/S being the most challenging due to
 - Overfitting gaps (train vs. test performance)
 - Cross-validation scores
 
-Detailed results and visualizations are available in `model_comparison_graphs.ipynb` and `ANALYSIS_AND_RESULTS.md`.
+Detailed results and visualizations are available in [model_comparison_graphs.ipynb](notebooks/model_comparison_graphs.ipynb) and [ANALYSIS_AND_RESULTS.md](ANALYSIS_AND_RESULTS.md).
 
 ## References
 
@@ -100,9 +100,9 @@ Detailed results and visualizations are available in `model_comparison_graphs.ip
 ## Usage
 
 1. Download the dataset from Kaggle and place it in the appropriate directory
-2. Run `mbti_preprocessing.ipynb` to preprocess the raw data
-3. Train models using the respective notebooks (SVM, Logistic Regression, Naive Bayes)
-4. Compare results using `model_comparison_graphs.ipynb`
+2. Run [mbti_preprocessing.ipynb](notebooks/mbti_preprocessing.ipynb) to preprocess the raw data
+3. Train models using the respective notebooks ([SVM](notebooks/mbti_svm.ipynb), [Logistic Regression](notebooks/mbti_logistic_regression.ipynb), [Naive Bayes](notebooks/naive_bayes_BOW.ipynb))
+4. Compare results using [model_comparison_graphs.ipynb](notebooks/model_comparison_graphs.ipynb)
 
 ## License
 
