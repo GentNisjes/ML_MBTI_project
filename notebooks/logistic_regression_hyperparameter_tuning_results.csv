@@ -1,0 +1,9 @@
+dimension,penalty,upsampling,best_C,best_solver,best_class_weight,cv_f1_score,test_accuracy,test_f1_score,test_precision,test_recall,fit_time_seconds
+I/E,l2,True,10.0,lbfgs,,0.8455,0.7454,0.8395,0.8179,0.8623,15.1086
+I/E,l1,True,10.0,liblinear,,0.8191,0.7165,0.815,0.8213,0.8087,19.9307
+J/P,l1,True,1.0,liblinear,,0.5297,0.5972,0.5465,0.4946,0.6107,14.9081
+J/P,l2,True,1.0,lbfgs,,0.5365,0.6208,0.5251,0.5228,0.5275,7.759
+N/S,l2,True,10.0,lbfgs,,0.9068,0.847,0.9126,0.8977,0.9279,10.1321
+N/S,l1,True,10.0,liblinear,,0.8826,0.8069,0.8869,0.894,0.8799,22.5617
+T/F,l2,True,10.0,lbfgs,,0.744,0.7643,0.7489,0.7373,0.7609,11.1425
+T/F,l1,True,10.0,liblinear,,0.7102,0.7342,0.7104,0.715,0.7059,16.3285
