@@ -20,20 +20,29 @@ The project uses the MBTI Myers-Briggs Personality Type Dataset from Kaggle, con
 
 ## Models Implemented
 
-### 1. [Support Vector Machine (Linear SVC)](notebooks/mbti_svm.ipynb)
-- Binary classification with optimal hyperparameters
-- Manual C parameter tuning to address overfitting
-- RandomOverSampler for class imbalance
+**Common Features Across All Models:**
+- Binary classification for each of the four MBTI dimensions
+- RandomOverSampler for handling class imbalance
+- 5-fold stratified cross-validation for robust performance estimation
+- Comprehensive evaluation metrics: accuracy, F1-score, precision, recall, overfitting gap
 
-### 2. [Logistic Regression](notebooks/mbti_logistic_regression.ipynb)
-- L1 (Lasso) and L2 (Ridge) regularization
-- Generalization-aware hyperparameter selection
-- GridSearchCV with 5-fold cross-validation ([hyperparameter tuning notebook](notebooks/logistic_regression_hyperparameter_tuning.ipynb))
+### Model-Specific Implementations:
 
-### 3. Naive Bayes
-- **[Bag of Words (BoW)](notebooks/naive_bayes_BOW.ipynb)**: Simple word frequency features
-- **[TF-IDF](notebooks/naive_bayes_TF-IDF.ipynb)**: Weighted features emphasizing distinctive words
-- Alpha smoothing for regularization
+#### 1. [Support Vector Machine (Linear SVC)](notebooks/mbti_svm.ipynb)
+- Linear kernel with optimal hyperparameters
+- Manual C parameter override (C=0.01) to reduce overfitting
+- Strong regularization for improved generalization
+
+#### 2. [Logistic Regression](notebooks/mbti_logistic_regression.ipynb)
+- L1 (Lasso) and L2 (Ridge) regularization options
+- [Systematic hyperparameter tuning](notebooks/logistic_regression_hyperparameter_tuning.ipynb) with GridSearchCV
+- Generalization-aware parameter selection framework
+- Exports three parameter configurations: standard, generalization-aware, and hand-picked L1
+
+#### 3. Naive Bayes
+- **[Bag of Words (BoW)](notebooks/naive_bayes_BOW.ipynb)**: Simple word frequency features with 5-fold CV
+- **[TF-IDF](notebooks/naive_bayes_TF-IDF.ipynb)**: Weighted features emphasizing distinctive words with 5-fold CV
+- Multinomial Naive Bayes with probabilistic classification
 
 ## Key Features
 
