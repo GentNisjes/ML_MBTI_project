@@ -29,15 +29,14 @@ The project uses the MBTI Myers-Briggs Personality Type Dataset from Kaggle, con
 ### Model-Specific Implementations:
 
 #### 1. [Support Vector Machine (Linear SVC)](notebooks/mbti_svm.ipynb)
+- [SVM hyperparameter tuning](notebooks/svm_hyperparameter_tuning.ipynb)
 - Linear kernel with optimal hyperparameters
 - Manual C parameter override (C=0.01) to reduce overfitting
 - Strong regularization for improved generalization
 
 #### 2. [Logistic Regression](notebooks/mbti_logistic_regression.ipynb)
+- [LR hyperparameter tuning](notebooks/logistic_regression_hyperparameter_tuning.ipynb) with GridSearchCV
 - L1 (Lasso) and L2 (Ridge) regularization options
-- [Systematic hyperparameter tuning](notebooks/logistic_regression_hyperparameter_tuning.ipynb) with GridSearchCV
-- Generalization-aware parameter selection framework
-- Exports three parameter configurations: standard, generalization-aware, and hand-picked L1
 
 #### 3. Naive Bayes
 - **[Bag of Words (BoW)](notebooks/naive_bayes_BOW.ipynb)**: Simple word frequency features with 5-fold CV
@@ -108,10 +107,36 @@ Detailed results and visualizations are available in [model_comparison_graphs.ip
 
 ## Usage
 
-1. Download the dataset from Kaggle and place it in the appropriate directory
-2. Run [mbti_preprocessing.ipynb](notebooks/mbti_preprocessing.ipynb) to preprocess the raw data
-3. Train models using the respective notebooks ([SVM](notebooks/mbti_svm.ipynb), [Logistic Regression](notebooks/mbti_logistic_regression.ipynb), [Naive Bayes](notebooks/naive_bayes_BOW.ipynb))
-4. Compare results using [model_comparison_graphs.ipynb](notebooks/model_comparison_graphs.ipynb)
+To reproduce the results and generate comparison graphs, run the notebooks in the following order:
+
+### Step 1: Data Preprocessing
+1. **[mbti_preprocessing.ipynb](notebooks/mbti_preprocessing.ipynb)** - Clean and vectorize text data
+   - Generates `preprocessed_data.csv` and TF-IDF vectorized features
+   - Required before training any models
+
+### Step 2: Hyperparameter Tuning (Optional but Recommended)
+2. **[svm_hyperparameter_tuning.ipynb](notebooks/svm_hyperparameter_tuning.ipynb)** - Find optimal C values for SVM
+   - Generates `optimal_hyperparameters_svm.json`
+3. **[logistic_regression_hyperparameter_tuning.ipynb](notebooks/logistic_regression_hyperparameter_tuning.ipynb)** - Find optimal parameters for LR
+   - Generates `optimal_hyperparameters_lr.json`
+
+### Step 3: Model Training
+Train each model using the optimal hyperparameters:
+4. **[mbti_svm.ipynb](notebooks/mbti_svm.ipynb)** - Train Linear SVC models
+   - Generates `svm_binary_dimensions_upsampled.pkl`
+5. **[mbti_logistic_regression.ipynb](notebooks/mbti_logistic_regression.ipynb)** - Train Logistic Regression models
+   - Generates `logistic_regression_binary_dimensions_optimal.pkl`
+6. **[naive_bayes_BOW.ipynb](notebooks/naive_bayes_BOW.ipynb)** - Train Naive Bayes with Bag of Words
+   - Generates `naive_bayes_BOW.pkl`
+7. **[naive_bayes_TF-IDF.ipynb](notebooks/naive_bayes_TF-IDF.ipynb)** - Train Naive Bayes with TF-IDF
+   - Generates `naive_bayes_TF-IDF.pkl`
+
+### Step 4: Model Comparison
+8. **[model_comparison_graphs.ipynb](notebooks/model_comparison_graphs.ipynb)** - Compare all models
+   - Loads all trained models and generates comprehensive comparison visualizations
+   - Shows F1-scores, overfitting analysis, and performance metrics across dimensions
+
+**Note**: Each notebook automatically saves its output files (`.pkl` files) to the `models/` directory, which are then loaded by the comparison notebook.
 
 ## License
 

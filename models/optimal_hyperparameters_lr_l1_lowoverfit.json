@@ -1,0 +1,62 @@
+{
+  "I/E": {
+    "C": 0.1,
+    "penalty": "l1",
+    "solver": "liblinear",
+    "class_weight": null,
+    "max_iter": 1000,
+    "random_state": 42,
+    "upsampling": true,
+    "expected_cv_f1": 0.750332333457657,
+    "expected_test_f1": 0.7405271828665568,
+    "expected_overfit_gap": -0.0013413810487518107,
+    "standard_l2_test_f1": 0.8395,
+    "standard_l2_overfit_gap": null,
+    "note": "L1 with lowest overfitting from generalization-aware selection"
+  },
+  "N/S": {
+    "C": 10.0,
+    "penalty": "l1",
+    "solver": "liblinear",
+    "class_weight": null,
+    "max_iter": 1000,
+    "random_state": 42,
+    "upsampling": true,
+    "expected_cv_f1": 0.8826226281398499,
+    "expected_test_f1": 0.886890349360083,
+    "expected_overfit_gap": 0.11484092007918056,
+    "standard_l2_test_f1": 0.9126,
+    "standard_l2_overfit_gap": null,
+    "note": "L1 with lowest overfitting from generalization-aware selection"
+  },
+  "T/F": {
+    "C": 1.0,
+    "penalty": "l1",
+    "solver": "liblinear",
+    "class_weight": null,
+    "max_iter": 1000,
+    "random_state": 42,
+    "upsampling": true,
+    "expected_cv_f1": 0.7089218544018745,
+    "expected_test_f1": 0.7255021302495435,
+    "expected_overfit_gap": 0.024517790912232496,
+    "standard_l2_test_f1": 0.7489,
+    "standard_l2_overfit_gap": null,
+    "note": "L1 with lowest overfitting from generalization-aware selection"
+  },
+  "J/P": {
+    "C": 0.1,
+    "penalty": "l1",
+    "solver": "liblinear",
+    "class_weight": null,
+    "max_iter": 1000,
+    "random_state": 42,
+    "upsampling": true,
+    "expected_cv_f1": 0.5294842659412055,
+    "expected_test_f1": 0.5089686098654709,
+    "expected_overfit_gap": 0.003025386986456824,
+    "standard_l2_test_f1": 0.5465,
+    "standard_l2_overfit_gap": null,
+    "note": "L1 with lowest overfitting from generalization-aware selection"
+  }
+}
